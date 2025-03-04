@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    server_name 0.0.0.0; # Hah as if I would put my IP in here
+
+    root /srv/rover;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
